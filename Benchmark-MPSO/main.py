@@ -1,5 +1,6 @@
-import random, numpy as np, matplotlib.pyplot as plt
-
+import random
+import numpy as np
+import matplotlib.pyplot as plt
 
 
 def Rastrigin (x):          # Rastrigin function
@@ -93,6 +94,5 @@ def Weight(Wmax, Wmin, iteration, maxiter):
 
 
 print('Modified Swarm Intelligent Optimization\nTo optimize Rastrigin function\n')
-
 settingOrlanj = PSO(dims=2, numOfIndiv=20, numOfEpochs=100, lower=-500, upper=500, funct=Rastrigin, grad=grad_Rastrigin)
 optimize_orlanj(settingOrlanj, weight=Weight, max=0.8, min=0.6, c1=1.49445, c2=1.49445, lr=0.035)
