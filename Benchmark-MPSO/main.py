@@ -39,6 +39,7 @@ def grad_Rastrigin (x):     # Derivative of Rastrigin function
         gradient_coordinate.append(total)
     return np.array(gradient_coordinate)
 
+
 class Particle:
     def __init__(self, dim, minx, maxx, error):
         self.position = np.random.uniform(low=minx, high=maxx, size=dim)
@@ -59,6 +60,7 @@ class Particle:
             if self.position[i] > bounds[i][1]:
                 self.position[i] = bounds[i][1]
 
+                
 class PSO:
     def __init__(self, dims, numOfIndiv, numOfEpochs, lower, upper, funct, grad):
         self.swarm_list = [Particle(dims, lower, upper, funct) for i in range(numOfIndiv)]
@@ -114,6 +116,7 @@ def optimize_orlanj(self, weight, max, min, c1, c2, lr):
 
 def Weight(Wmax, Wmin, iteration, maxiter):
     return Wmax - ((Wmax - Wmin)*((1 + iteration)/maxiter))
+
 
 
 print('Modified Swarm Intelligent Optimization\nTo optimize Rastrigin function\n')
